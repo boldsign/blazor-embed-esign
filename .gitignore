@@ -1,6 +1,2 @@
-Clinet/bin/*
-Server/bin/*
-Shared/bin/*
-Clinet/obj/*
-Server/obj/*
-Shared/obj/*
+**/bin/**
+**/obj/**
