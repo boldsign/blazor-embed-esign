@@ -1,0 +1,21 @@
+﻿@page "/embeddedsign"
+@using BlazorBoldSignApp.Shared
+@inject HttpClient Http
+<h3>EmbeddedSign</h3>
+
+@if (string.IsNullOrEmpty(embeddedSignDetails?.SignLink))
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <iframe id="iframeID" src="@embeddedSignDetails.SignLink" height="1000" width="1100" allowfullscreen></iframe>
+}
+@code {
+    private EmbeddedSignDetails embeddedSignDetails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        embeddedSignDetails = await Http.GetFromJsonAsync<EmbeddedSignDetails>("EmbeddedSign/SignLink").ConfigureAwait(false);
+    }
+}

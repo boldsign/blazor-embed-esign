@@ -1,0 +1,9 @@
+@page "/response"
+@inject IJSRuntime jsRuntime
+<h2>Please Wait !</h2>
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await jsRuntime.InvokeVoidAsync("SignCompleted");
+    }
+}

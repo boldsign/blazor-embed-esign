@@ -1,0 +1,16 @@
+﻿@page "/"
+
+@inject NavigationManager UriHelper
+
+<h2>Integration e-signature solution using BoldSign in Blazor application</h2>
+<br />
+<p>BoldSign API provides an easy and clean interface to integrate the entire e-signature workflow into your app with a matter of minutes. </p>
+<br />
+<button style="background:#0565FF;color:#fff;border:1px solid #0565FF;border-radius:4px;height:32px;" @onclick=@Navigate>SignDocument</button>
+
+@code {
+    void Navigate()
+    {
+        UriHelper.NavigateTo("embeddedsign");
+    }
+}
