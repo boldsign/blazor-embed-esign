@@ -77,4 +77,4 @@ EmbeddedSigningLink embeddedSigning = this.documentClient.GetEmbeddedSignLink(
     } 
 } 
 ```
-Once all the recipients signed the document, you use the DownloadDocument API to fetch the completed document and send further processes, if any.
+Once all the recipients signed the document, you use the [DownloadDocument](https://www.boldsign.com/help/api/document/download-document/) API to fetch the completed document and send further processes, if any.
